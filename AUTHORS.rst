@@ -1,7 +1,5 @@
-Authors
--------
+Creators
+--------
 
-* Eric (New contributor)
-* Anthony 
-
-
+* iopred
+* Matt
