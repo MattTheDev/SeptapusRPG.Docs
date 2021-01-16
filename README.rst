@@ -25,4 +25,4 @@ To see the current relic, and the progress made towards obtaining it, type the f
 Support
 -------
 
-Having issues? Join the [SeptapusRPG Community Discord Server](http://discord.septapusrpg.com/)!
+Having issues? Join the `SeptapusRPG Community Discord Server <http://discord.septapusrpg.com/>`__
