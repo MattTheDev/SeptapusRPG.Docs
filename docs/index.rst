@@ -31,6 +31,14 @@ But can't I just cheat by flooding the channel?
 
 No! Not only are the rules made to reward larger parties, but multiple messages by the same person are ignored and you can only fight once every minute.
 
+===========
+Quick Setup
+===========
+
+1. `Invite the Bot <http://invite.septapusrpg.com/>`__
+2. Once it joins your server, type +start
+3. Enjoy!
+
 =====
 Links
 =====
