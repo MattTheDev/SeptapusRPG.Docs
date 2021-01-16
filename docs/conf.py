@@ -28,7 +28,13 @@ import os
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.viewcode",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.doctest",
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -43,8 +49,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Read the Docs Template'
-copyright = u'2014, Read the Docs'
+project = u'SeptapusRPG Docs'
+copyright = u'2020, iopred & Matt Smith'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -98,12 +104,14 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
-
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#html_theme_options = {}
+html_theme = 'sphinx_rtd_theme'
+html_theme_options = {
+    'logo_only': True,
+    'prev_next_buttons_location': 'None'
+}
+html_logo = "_static/septapusrpg.png"
+html_favicon = "_static/favicon.png"
+html_show_sourcelink = False
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -176,7 +184,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ReadtheDocsTemplatedoc'
+htmlhelp_basename = 'SeptapusRPG'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -196,8 +204,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ReadtheDocsTemplate.tex', u'Read the Docs Template Documentation',
-   u'Read the Docs', 'manual'),
+  ('index', 'SeptapusRPG.tex', u'SeptapusRPG Documentation',
+   u'SeptapusRPG', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -226,8 +234,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'readthedocstemplate', u'Read the Docs Template Documentation',
-     [u'Read the Docs'], 1)
+    ('index', 'SeptapusRPG', u'SeptapusRPG Documentation',
+     [u'SeptapusRPG'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -240,8 +248,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ReadtheDocsTemplate', u'Read the Docs Template Documentation',
-   u'Read the Docs', 'ReadtheDocsTemplate', 'One line description of project.',
+  ('index', 'SeptapusRPG', u'SeptapusRPG Documentation',
+   u'SeptapusRPG', 'SeptapusRPG', 'Discord Idle RPG Bot',
    'Miscellaneous'),
 ]
 
@@ -256,3 +264,37 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+# -- Options for linkcheck builder ----------------------------------------
+
+# A list of regular expressions that match URIs that should not be
+# checked when doing a linkcheck build.
+linkcheck_ignore = [r"https://java.com*", r"https://chocolatey.org*"]
+
+
+# -- Options for extensions -----------------------------------------------
+
+# Intersphinx
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3", None),
+    "dpy": ("https://discordpy.readthedocs.io/en/v1.0.1/", None),
+    "motor": ("https://motor.readthedocs.io/en/stable/", None),
+}
+
+# Doctest
+# If this string is non-empty, all blocks with ``>>>`` in them will be
+# tested, not just the ones explicitly marked with ``.. doctest::``
+doctest_test_doctest_blocks = ""
+
+
+# Autodoc options
+autodoc_default_flags = ["show-inheritance"]
+autodoc_typehints = "none"
+
+html_static_path = ['_static']
+
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css',  # override wide tables in RTD theme
+        ],
+     }

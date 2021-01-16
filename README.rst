@@ -1,41 +1,28 @@
-Template
-========
+SeptapusRPG Commands
+====================
 
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+Starting a Game
+---------------
 
-Look how easy it is to use:
+After [inviting the bot to your server](http://invite.septapusrpg.com/), you will need to start your game. To do that, type the following:
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
++start 
 
-Features
---------
+Monster
+-------
 
-- Be awesome
-- Make things faster
+To see the current monster, and the progress made towards vanquishing it, type the following:
 
-Installation
-------------
++monster
 
-Install $project by running:
-
-    install project
-
-Contribute
+Relic
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+To see the current relic, and the progress made towards obtaining it, type the following:
+
++relic
 
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
-
-License
--------
-
-The project is licensed under the BSD license.
+Having issues? Join the [SeptapusRPG Community Discord Server](http://discord.septapusrpg.com/)!
